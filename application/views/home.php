@@ -76,39 +76,67 @@
 							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
 							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
 							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
+
 						</div>
 					</div>
+
+
+
+
 					<div class="box-content">
+
+								<div class="center">
+									<a class="btn btn-success" href="#">
+									<i class="halflings-icon white user"></i>Create
+								</a>
+							 </div>
+							 <?php echo br(1); ?>
+
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
+									<th>id</th>
 								  <th>Username</th>
-								  <th>Date registered</th>
-								  <th>Role</th>
-								  <th>Status</th>
+								  <th>Phone</th>
+								  <th>Address</th>
+								  <th>City</th>
+									<th>Country</th>
 								  <th>Actions</th>
 							  </tr>
 						  </thead>
 						  <tbody>
-							<tr>
-								<td>Anton Phunihel</td>
-								<td class="center">2012/01/01</td>
-								<td class="center">Member</td>
-								<td class="center">
-									<span class="label label-success">Active</span>
-								</td>
-								<td class="center">
-									<a class="btn btn-success" href="#">
-										<i class="halflings-icon white zoom-in"></i>
-									</a>
-									<a class="btn btn-info" href="#">
-										<i class="halflings-icon white edit"></i>
-									</a>
-									<a class="btn btn-danger" href="#">
-										<i class="halflings-icon white trash"></i>
-									</a>
-								</td>
-							</tr>
+
+<?php if(count($results)): ?>
+								<?php
+		foreach ($results as $value) {?>
+
+	<tr>
+
+				<td class="center"><?php echo $value->id; ?></td>
+				<td class="center"><?php echo $value->customer_name; ?></td>
+				<td class="center"><?php echo $value->phone; ?></td>
+				<td class="center"><?php echo $value->address; ?></td>
+				<td class="center"><?php echo $value->city; ?></td>
+				<td class="center"><?php echo $value->country; ?></td>
+
+
+				<td class="center">
+
+					<a class="btn btn-primary" href="#">
+						<i class="halflings-icon white edit"></i>
+					</a>
+
+					<a class="btn btn-danger" href="#">
+						<i class="halflings-icon white trash"></i>
+					</a>
+				</td>
+		 </tr>
+
+		<?php }?>
+	<?php else: ?>
+		<tr>No records found</tr>
+	<?php endif;?>
+
 
 						  </tbody>
 					  </table>
