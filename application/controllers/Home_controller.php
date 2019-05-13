@@ -39,18 +39,19 @@ class Home_controller extends CI_Controller {
 
                       if($this->Crud_model->insertData($data))
                       {
-                          //$this->session->set_flashdata('response','Records saved Successfully!');
-                          echo "Successfully";
+                          $this->session->set_flashdata('response','Records saved Successfully!');
+
                       }
                       else
                       {
-                          //$this->session->set_flashdata('response','Records failed to save');
-                          echo "failed";
+                          $this->session->set_flashdata('response','Records failed to save');
+
                       }
                         //return redirect('home');
-                      //$this->load->model('Crud_model');
-                    //  $data['results']= $this->Crud_model->getData();
-                      //$this->load->view('home', $data);
+                        // return to home page
+                      $this->load->model('Crud_model');
+                      $data['results']= $this->Crud_model->getData();
+                      $this->load->view('home', $data);
                 }
                 else
                 {
