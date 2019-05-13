@@ -27,7 +27,7 @@
 
 
             <div class="box-content">
-          <?php echo validation_errors(); ?>
+          <?php// echo validation_errors(); ?>
 
             <?php echo form_open('Home_controller/save',['class'=>'form-horizontal']); ?>
                 <fieldset>
@@ -38,6 +38,9 @@
 
                       <?php echo form_input(["name"=>"customer_name","placeholder"=>"Customer name","value"=>set_value("customer_name")]);?>
                     </div>
+                      <div class="controls span3">
+                      <?php echo form_error('customer_name');?>
+                    </div>
                   </div>
 
                   <div class="control-group">
@@ -46,6 +49,9 @@
 
                         <?php echo form_input(["name"=>"phone","placeholder"=>"contact phone","value"=>set_value("phone")]);?>
                     </div>
+                      <div class="controls span3">
+                      <?php echo form_error('phone');?>
+                    </div>
                   </div>
 
                   <div class="control-group">
@@ -53,7 +59,10 @@
                     <div class="controls">
 
                       <?php echo form_input(["name"=>"address","placeholder"=>"contact address","value"=>set_value("address")]);?>
-                      ?>
+
+                    </div>
+                      <div class="controls span3">
+                      <?php echo form_error('address');?>
                     </div>
                   </div>
 
@@ -67,6 +76,9 @@
                       <?php echo form_input(["name"=>"city","placeholder"=>"Current city","value"=>set_value("city")]);
                       ?>
                     </div>
+                    <div class="controls span3">
+                      <?php echo form_error('city');?>
+                    </div>
                   </div>
 
                   <div class="control-group">
@@ -74,6 +86,9 @@
                     <div class="controls">
                     <?php echo form_input(["name"=>"country","placeholder"=>"Country","value"=>set_value("country")]);
                     ?>
+                    </div>
+                      <div class="controls span3">
+                      <?php echo form_error('country');?>
                     </div>
                 </div>
 

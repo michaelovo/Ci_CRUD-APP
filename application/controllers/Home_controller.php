@@ -21,8 +21,29 @@ class Home_controller extends CI_Controller {
       {
         	$this->load->view('create');
       }
+
       public function save()
       {
+
+        $this->form_validation->set_rules('customer_name', 'Customer name', 'required|alpha|xss_clean');
+        $this->form_validation->set_rules('phone', 'contact phone', 'required|xss_clean');
+        $this->form_validation->set_rules('address', 'contact address', 'required|xss_clean');
+        $this->form_validation->set_rules('city', 'current city', 'required|xss_clean');
+        $this->form_validation->set_rules('country', 'Countrt', 'required|xss_clean');
+        $this->form_validation->set_error_delimiters('<div class="text-danger red">', '</div>');
+
+                if ($this->form_validation->run() )
+                {
+                  //$this->load->model('Crud_model');
+                  //$this->Crud_model->insertData($data);
+                        //$this->load->view('myform');
+                        //echo "success";
+                }
+                else
+                {
+                        $this->load->view('create');
+                      //echo validation_errors();
+                }
           //$this->load->library('form_validation');
           //$this->form_validation->set_rules('customer_name','customer name','required|alpha|xss_clean');
       }
