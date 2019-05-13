@@ -3,7 +3,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 	<!-- start: Favicon -->
-	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="shortcut icon" href="<?php echo base_url("resources/img/favicon.ico");?>">
 	<!-- end: Favicon -->
 
 
