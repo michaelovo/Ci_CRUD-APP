@@ -27,16 +27,16 @@
 
 
             <div class="box-content">
-          <?php// echo validation_errors(); ?>
 
-            <?php echo form_open('Home_controller/save',['class'=>'form-horizontal']); ?>
+
+            <?php echo form_open("Home_controller/update/{$data->id}",["class"=>"form-horizontal"]); ?>
                 <fieldset>
 
                   <div class="control-group">
                   <label class="control-label" for="focusedInput">Name</label>
                     <div class="controls">
 
-                      <?php echo form_input(["name"=>"customer_name","placeholder"=>"Customer name","value"=>set_value("customer_name")]);?>
+                      <?php echo form_input(["name"=>"customer_name","placeholder"=>"Customer name","value"=>set_value("customer_name",$data->customer_name)]);?>
                     </div>
                       <div class="controls span3">
                       <?php echo form_error('customer_name');?>
@@ -47,7 +47,7 @@
                   <label class="control-label" for="focusedInput">Phone</label>
                     <div class="controls">
 
-                        <?php echo form_input(["name"=>"phone","placeholder"=>"contact phone","value"=>set_value("phone")]);?>
+                        <?php echo form_input(["name"=>"phone","placeholder"=>"contact phone","value"=>set_value("phone",$data->phone)]);?>
                     </div>
                       <div class="controls span3">
                       <?php echo form_error('phone');?>
@@ -58,7 +58,7 @@
                   <label class="control-label" for="focusedInput">Address</label>
                     <div class="controls">
 
-                      <?php echo form_input(["name"=>"address","placeholder"=>"contact address","value"=>set_value("address")]);?>
+                      <?php echo form_input(["name"=>"address","placeholder"=>"contact address","value"=>set_value("address",$data->address)]);?>
 
                     </div>
                       <div class="controls span3">
@@ -72,8 +72,7 @@
                   <div class="control-group">
                   <label class="control-label" for="focusedInput" >City</label>
                     <div class="controls">
-                      <!--input class="input-xlarge focused" id="city" type="text" value="" placeholder="Current city"-->
-                      <?php echo form_input(["name"=>"city","placeholder"=>"Current city","value"=>set_value("city")]);
+                      <?php echo form_input(["name"=>"city","placeholder"=>"Current city","value"=>set_value("city",$data->city)]);
                       ?>
                     </div>
                     <div class="controls span3">
@@ -84,7 +83,7 @@
                   <div class="control-group">
                   <label class="control-label" for="focusedInput">Country</label>
                     <div class="controls">
-                    <?php echo form_input(["name"=>"country","placeholder"=>"Country","value"=>set_value("country")]);
+                    <?php echo form_input(["name"=>"country","placeholder"=>"Country","value"=>set_value("country",$data->country)]);
                     ?>
                     </div>
                       <div class="controls span3">
@@ -95,7 +94,6 @@
 
 
                   <div class="form-actions">
-                  <!--button type="submit" class="btn btn-primary">Save changes</button-->
                     <?php echo form_submit(['value'=>'Save changes','class'=>"btn btn-primary"]); ?>
                     <?php echo form_reset(['value'=>'Cancel','class'=>"btn btn-warning"]); ?>
 

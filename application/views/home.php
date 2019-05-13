@@ -81,13 +81,14 @@
 
 				<td class="center">
 
-					<a class="btn btn-primary" href="<?php echo site_url("Home_controller/create/");?>">
-						<i class="halflings-icon white edit"></i>
-					</a>
+							<a class="btn btn-primary" href="<?php echo site_url("Home_controller/edit/{$value->id}");?>">
+								<i class="halflings-icon white edit"></i>
+							</a>
 
 					<a class="btn btn-danger" href="<?php echo site_url("Home_controller/create/");?>">
 						<i class="halflings-icon white trash"></i>
 					</a>
+					
 				</td>
 		 </tr>
 
