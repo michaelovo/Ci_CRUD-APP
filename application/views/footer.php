@@ -1,11 +1,9 @@
 
-<div class="clearfix"></div>
-
 	<footer>
 
 		<p>
-			<span style="text-align:left;float:left">&copy; 2013 <a href="http://bootstrapmaster.com/" alt="Bootstrap Themes">creativeLabs</a></span>
-			<span class="hidden-phone" style="text-align:right;float:right">Powered by: <a href="http://admintemplates.co/" alt="Bootstrap Admin Templates">Metro</a></span>
+			<span style="text-align:left;float:left">&copy; 2019 <a href="#" alt="Bootstrap Themes">The Michaels</a></span>
+			<span class="hidden-phone" style="text-align:right;float:right">Powered by: <a href="#" alt="Bootstrap Admin Templates">The great programmers </a></span>
 		</p>
 
 	</footer>
@@ -68,7 +66,3 @@
 
 		<script src="<?php echo base_url("resources/js/custom.js");?>"></script>
 	<!-- end: JavaScript-->
-
-
-</body>
-</html>

@@ -1,4 +1,4 @@
-<body>
+
 	<!-- start: Header -->
 	<div class="navbar">
 		<div class="navbar-inner">
@@ -8,7 +8,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"><span>Metro</span></a>
+				<a class="brand" href="#"><span>The michaels CRUD App</span></a>
 
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -36,7 +36,7 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> Łukasz Holeczek
+								<i class="halflings-icon white user"></i> Prof
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
