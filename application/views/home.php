@@ -54,7 +54,7 @@
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
-									<th>id</th>
+									<!--th>id</th-->
 								  <th>Username</th>
 								  <th>Phone</th>
 								  <th>Address</th>
@@ -71,7 +71,7 @@
 
 	<tr>
 
-				<td class="center"><?php echo $value->id; ?></td>
+				<!--td class="center"><?php //echo $value->id; ?></td-->
 				<td class="center"><?php echo $value->customer_name; ?></td>
 				<td class="center"><?php echo $value->phone; ?></td>
 				<td class="center"><?php echo $value->address; ?></td>
@@ -85,10 +85,10 @@
 								<i class="halflings-icon white edit"></i>
 							</a>
 
-					<a class="btn btn-danger" href="<?php echo site_url("Home_controller/create/");?>">
+					<a class="btn btn-danger" href="<?php echo site_url("Home_controller/delete/{$value->id}");?>">
 						<i class="halflings-icon white trash"></i>
 					</a>
-					
+
 				</td>
 		 </tr>
 

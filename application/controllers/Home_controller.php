@@ -99,7 +99,21 @@ class Home_controller extends CI_Controller {
 
         }//end update()
 
+        function delete($record_id)
+        {
+                if($this->Crud_model->deleteRecords($record_id))
+                {
+                    $this->session->set_flashdata('response','Record Deleted Successfully!');
+                }
+                else
+                {
+                    $this->session->set_flashdata('response','Record failed to Delete');
+                }
 
+                //return redirect('home');
+                $data['results']= $this->Crud_model->getData();
+                $this->load->view('home', $data);
+        }
 
 
 

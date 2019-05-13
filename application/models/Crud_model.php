@@ -38,6 +38,15 @@
           */
       }
 
+      function deleteRecords($record_id)
+      {
+        return $this->db->delete('customer', array('id' => $record_id));
+        /*
+      return  $this->db->where('id', $record_id)
+                ->delete('customer');
+        */
+      }
+
 
   }
 
