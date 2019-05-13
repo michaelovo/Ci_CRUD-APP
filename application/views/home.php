@@ -29,12 +29,22 @@
 
 
 					<div class="box-content">
-
 								<div class="center">
 
+							<?php //if($error = $this->session->flashdata('response')):?>
+										<!--div class="alert alert-dismissible alert alert-success">
+												<button type="button" class="close" data-dismiss="alert">×</button>
+														<i class="halflings-icon info-sign"></i>
+															<?php// echo $error; ?>
+										</div-->
+						 <?php //endif; ?>
 
-						<?php echo anchor("Home_controller/create",'Create',['class'=>'btn btn-success']);?>
+						 	<!--This is an alternative -->
+						<?php //echo anchor("Home_controller/create",'Create',['class'=>'btn btn-success']);?>
 
+						<!--a class="btn btn-success" href="<?php echo site_url("Home_controller/create/");?>">
+							<i class="halflings-icon white user"></i>Add new
+						</a-->
 
 
 
@@ -71,11 +81,11 @@
 
 				<td class="center">
 
-					<a class="btn btn-primary" href="#">
+					<a class="btn btn-primary" href="<?php //echo site_url("Home_controller/create/");?>">
 						<i class="halflings-icon white edit"></i>
 					</a>
 
-					<a class="btn btn-danger" href="#">
+					<a class="btn btn-danger" href="<?php //echo site_url("Home_controller/create/");?>">
 						<i class="halflings-icon white trash"></i>
 					</a>
 				</td>

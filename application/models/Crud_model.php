@@ -8,12 +8,12 @@
 
       }
 
-    //  public function insertData($data)
-    //  {
-      //    return $this->db->insert('customer',$data);//combine stmt. select user with id =3
+      public function insertData($data)
+      {
+          return $this->db->insert('customer',$data);//combine stmt. select user with id =3
         //  return $query->result();// use as an object
 
-    //  }
+      }
 
 
   }
